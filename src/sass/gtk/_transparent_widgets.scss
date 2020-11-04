@@ -155,17 +155,17 @@ filechooser {
 
 %dark_sidebar_scrollbar {
 
-  border-color: transparent;
+  //border-color: transparent;
 
   &.overlay-indicator:not(.dragging):not(.hovering) slider {
-    background-color: rgba(lighten($dark_sidebar_fg, 15%), 0.35);
-    border: none;
+    background-color: transparentize(mix($fg_color, $bg_color, 70%), 0.55);
+    border-color: transparent;
   }
   slider {
-    min-width: 4px;
-    background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
+    min-width: 8px;
+    background-color: mix($fg_color, $bg_color, 50%);
 
-    &:hover { background-color: lighten($dark_sidebar_fg, 20%); }
+    &:hover { background-color: mix($fg_color, $bg_color, 70%); }
 
     &:hover:active { background-color: $header_button_checked_bg; }
 
