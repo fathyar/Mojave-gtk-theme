@@ -405,6 +405,16 @@ popover.background.places-menu {
       border-radius: 0 0 0 0;
       border-width: 1px 0 0 0;
     }
+    
+    menubar,
+    .menubar {
+      
+      > menuitem {
+
+        > window.background.popup > decoration,
+        > window.background.popup > menu { border-radius: $wm_radius $wm_radius 0 0; }
+      }
+    }
   }
 
   .left & {
@@ -416,6 +426,16 @@ popover.background.places-menu {
       border-radius: 0 0 0 0;
       border-width: 0 1px 0 0;
     }
+    
+    menubar,
+    .menubar {
+      
+      > menuitem {
+
+        > window.background.popup > decoration,
+        > window.background.popup > menu { border-radius: 0 $wm_radius $wm_radius 0; }
+      }
+    }
   }
 
   .right & {
@@ -426,6 +446,16 @@ popover.background.places-menu {
     &.dock-mode {
       border-radius: 0 0 0 0;
       border-width: 0 0 0 1px;
+    }
+    
+    menubar,
+    .menubar {
+      
+      > menuitem {
+
+        > window.background.popup > decoration,
+        > window.background.popup > menu { border-radius: $wm_radius 0 0 $wm_radius; }
+      }
     }
   }
 
