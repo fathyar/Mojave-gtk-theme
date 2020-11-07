@@ -421,6 +421,11 @@ popover.background.places-menu {
     button.flat {
 	    border-radius: $wm_radius $wm_radius 0 0;
     }
+    
+    button.budgie-menu-launcher {
+      padding: 0px 1px 0px 4px;
+    }
+    
   }
 
   .left & {
