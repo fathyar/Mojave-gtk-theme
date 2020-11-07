@@ -3413,3 +3413,25 @@ scale.warmth trough {
     notebook > header { border-color: $solid_borders_color; }
   }
 }
+
+// Foliate
+.foliate-autohide-container { // reading mode
+  
+  &:not(.foliate-autohide-titlebar) { // bottom titlebar
+    border-radius: 0 0 $wm_radius $wm_radius;
+    
+    actionbar { // floating actionbar
+      margin: 0 0 2px 0;
+    }
+  }
+  
+  .fullscreen &, // in fullscreen window mode
+  .maximized &, // in maximized window mode
+  .foliate-skeuomorph-page & { // 'realistic shadows' mode
+  
+    &:not(.foliate-autohide-titlebar),
+    &:not(.foliate-autohide-titlebar) actionbar {
+      border-radius: 0 0 0 0;
+    }
+  }
+}
