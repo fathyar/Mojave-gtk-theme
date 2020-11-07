@@ -415,6 +415,12 @@ popover.background.places-menu {
         > window.background.popup > menu { border-radius: $wm_radius $wm_radius $wm_radius $wm_radius; }
       }
     }
+    
+    .icon-tasklist revealer button,
+    wnck-tasklist button,
+    button.flat {
+	    border-radius: $wm_radius $wm_radius 0 0;
+    }
   }
 
   .left & {
@@ -436,6 +442,12 @@ popover.background.places-menu {
         > window.background.popup > menu { border-radius: $wm_radius $wm_radius $wm_radius $wm_radius; }
       }
     }
+    
+    .icon-tasklist revealer button,
+    wnck-tasklist button,
+    button.flat {
+	    border-radius: 0 $wm_radius $wm_radius 0;
+    }
   }
 
   .right & {
@@ -456,6 +468,12 @@ popover.background.places-menu {
         > window.background.popup > decoration,
         > window.background.popup > menu { border-radius: $wm_radius $wm_radius $wm_radius $wm_radius; }
       }
+    }
+    
+    .icon-tasklist revealer button,
+    wnck-tasklist button,
+    button.flat {
+	    border-radius: $wm_radius 0 0 $wm_radius;
     }
   }
 
