@@ -398,12 +398,12 @@ popover.background.places-menu {
 
   .bottom & {
     border: solid $panel_border_color;
-    border-width: 1px 1px 0 1px;
-    border-radius: $wm_radius $wm_radius 0 0;
+    border-width: 1px 0 0 0;
+    border-radius: 0 0 0 0;
 
     &.dock-mode {
-      border-radius: 0 0 0 0;
-      border-width: 1px 0 0 0;
+      border-radius: $wm_radius $wm_radius 0 0;
+      border-width: 1px 1px 0 1px;
     }
     
     menubar,
@@ -412,19 +412,19 @@ popover.background.places-menu {
       > menuitem {
 
         > window.background.popup > decoration,
-        > window.background.popup > menu { border-radius: $wm_radius $wm_radius 0 0; }
+        > window.background.popup > menu { border-radius: $wm_radius $wm_radius $wm_radius $wm_radius; }
       }
     }
   }
 
   .left & {
     border: solid $panel_border_color;
-    border-width: 1px 1px 1px 0;
-    border-radius: 0 $wm_radius $wm_radius 0;
+    border-width: 0 1px 0 0;
+    border-radius: 0 0 0 0;
 
     &.dock-mode {
-      border-radius: 0 0 0 0;
-      border-width: 0 1px 0 0;
+      border-radius: 0 $wm_radius $wm_radius 0;
+      border-width: 1px 1px 1px 0;
     }
     
     menubar,
@@ -433,19 +433,19 @@ popover.background.places-menu {
       > menuitem {
 
         > window.background.popup > decoration,
-        > window.background.popup > menu { border-radius: 0 $wm_radius $wm_radius 0; }
+        > window.background.popup > menu { border-radius: $wm_radius $wm_radius $wm_radius $wm_radius; }
       }
     }
   }
 
   .right & {
     border: solid $panel_border_color;
-    border-width: 1px 0 1px 1px;
-    border-radius: $wm_radius 0 0 $wm_radius;
+    border-width: 0 0 0 1px;
+    border-radius: 0 0 0 0;
 
     &.dock-mode {
-      border-radius: 0 0 0 0;
-      border-width: 0 0 0 1px;
+      border-radius: $wm_radius 0 0 $wm_radius;
+      border-width: 1px 0 1px 1px;
     }
     
     menubar,
@@ -454,7 +454,7 @@ popover.background.places-menu {
       > menuitem {
 
         > window.background.popup > decoration,
-        > window.background.popup > menu { border-radius: $wm_radius 0 0 $wm_radius; }
+        > window.background.popup > menu { border-radius: $wm_radius $wm_radius $wm_radius $wm_radius; }
       }
     }
   }
