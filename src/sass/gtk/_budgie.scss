@@ -1250,3 +1250,11 @@ window.budgie-switcher-window {
     > button.image-button.titlebutton { padding: 0 3px; }
   }
 }
+
+// Status Indicator applet
+.budgie-panel.horizontal {
+  widget.sound-applet { // fix uneven space between battery and audio volume icons
+    &:dir(ltr) image { margin-left: 0.5em; }
+    &:dir(rtl) image { margin-right: 0.5em; }
+  }
+}
