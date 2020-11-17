@@ -1304,10 +1304,33 @@ window.budgie-switcher-window {
   }
 }
 
-// Status Indicator applet
+// fix uneven spaces between applet icons
 .budgie-panel.horizontal {
-  widget.sound-applet { // fix uneven space between battery and audio volume icons
-    &:dir(ltr) image { margin-left: 0.5em; }
-    &:dir(rtl) image { margin-right: 0.5em; }
+  .top & { // top panel
+    widget>widget>image, // common structure of applet icons
+    .budgie-network-applet image, // network applet
+    widget>separator.vertical { // separator
+      margin: 0 .25em 0 .25em;
+    }
+    widget .battery-icon { // status indicator applet: battery
+      &:dir(ltr) { margin: 0 0 0 .25em; }
+      &:dir(rtl) { margin: 0 .25em 0 0; }
+    }
+    widget.sound-applet image { // status indicator applet: audio volume
+      &:dir(ltr) { margin: 0 0 0 .5em; }
+      &:dir(rtl) { margin: 0 .5em 0 0; }
+    }
+    widget.sound-applet + widget>widget>image { // status indicator applet: Bluetooth icon
+      &:dir(ltr) { margin: 0 0em 0 0; }
+      &:dir(rtl) { margin: 0 0 0 0em; }
+    }
+    .keyboard-indicator image { // keyboard indicator applet: icon
+      &:dir(ltr) { margin: 0 -.25em 0 .25em; }
+      &:dir(rtl) { margin: 0 .25em 0 -.25em; }
+    }
+    .keyboard-indicator label { // keyboard indicator applet: input language label
+      &:dir(ltr) { margin: 0 .25em 0 0; }
+      &:dir(rtl) { margin: 0 0 0 .25em; }
+    }
   }
 }
