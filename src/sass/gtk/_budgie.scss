@@ -1333,4 +1333,15 @@ window.budgie-switcher-window {
       &:dir(rtl) { margin: 0 0 0 .25em; }
     }
   }
+  .bottom & { // bottom panel
+    widget>button.flat.toggle>image, // show desktop button applet
+    widget>widget>image, // common structure of applet icons
+    widget>separator.vertical { // separator
+      margin: 0 .25em 0 .25em;
+    }
+    widget>widget>label { // compact workspace switcher applet
+      &:dir(ltr) { margin: 0 -.25em 0 -.5em; }
+      &:dir(rtl) { margin: 0 -.5em 0 -.25em; }
+    }
+  }
 }
