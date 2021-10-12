@@ -496,6 +496,14 @@ popover.background.places-menu {
       &.dock-mode {
         border-width: $dock_border_width;
         border-radius: $dock_border_radius;
+        
+        @if($variant == 'dark') {
+          border-color: $panel_border_color;
+          box-shadow: if($pos == 'top', null,    inset 0  1px $borders_color),
+                      if($pos == 'bottom', null, inset 0 -1px $borders_color),
+                      if($pos == 'left', null,   inset  1px 0 $borders_color),
+                      if($pos == 'right', null,  inset -1px 0 $borders_color);
+        }
       }
     }
   }
